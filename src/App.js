@@ -24,6 +24,9 @@ function App() {
     if(userNameNew.length > 0) {
       userName = userNameNew
     }
+    else {
+      userName = nanoid(4)
+    }
     socket.emit("chat", {message, userName});
 
     setMessage("");
