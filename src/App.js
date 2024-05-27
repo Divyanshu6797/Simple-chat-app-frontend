@@ -5,7 +5,10 @@ import {useState, useEffect} from 'react';
 import io from 'socket.io-client';
 import {nanoid} from 'nanoid';
 
-const socket = io.connect("http://localhost:5000");
+const socket = io.connect("https://simple-chat-app-backend.vercel.app/", {
+  withCredentials: true,
+  
+});
 const userName = nanoid(4);
 
 
